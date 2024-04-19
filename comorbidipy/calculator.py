@@ -2,12 +2,7 @@
 import warnings
 from functools import lru_cache
 import pandas as pd
-try:
-    # for newer versions of pandas
-    from pandas.errors import SettingWithCopyWarning
-except:
-    # for older versions of pandas
-    from pandas.core.common import SettingWithCopyWarning
+from pandas.errors import SettingWithCopyWarning
 
 warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
 
